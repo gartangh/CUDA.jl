@@ -14,8 +14,8 @@ const CUDNNFloat = Union{Float16,Float32,Float64}
 # Since CUDNN does not support 1D convolution, Conv in Flux will give a CUDNNError if the size is 1-dimensional.
 fix1d(x) = x
 fix1d(x::CuArray{T, 3}) where T = reshape(x, size(x, 1), 1, size(x, 2), size(x, 3))
-fix1d(cdims::DenseConvDims{1,K,C_in,C_out,S,P,D,F}) where {K,C_in,C_out,S,P,D,F} =
-  DenseConvDims{2,(K...,1),C_in,C_out,(S...,1),(P...,0,0),(D...,1),F}((cdims.I...,1))
+fix1d(cdims::DenseConvDims{1,K,C_in,C_out,S,P,D,F,G}) where {K,C_in,C_out,S,P,D,F,G} =
+  DenseConvDims{2,(K...,1),C_in,C_out,(S...,1),(P...,0,0),(D...,1),F,G}((cdims.I...,1))
 fix1d(pdims::PoolDims{1,K,S,P,D}) where {K,S,P,D,F} =
   PoolDims{2,(K...,1),(S...,1),(P...,0,0),(D...,1)}((pdims.I..., 1), pdims.C_in)
 
