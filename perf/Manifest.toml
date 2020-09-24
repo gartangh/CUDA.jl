@@ -19,9 +19,9 @@ uuid = "8ba89e20-285c-5b6f-9357-94700520ee1b"
 
 [[HTTP]]
 deps = ["Base64", "Dates", "IniFile", "MbedTLS", "Sockets"]
-git-tree-sha1 = "2ac03263ce44be4222342bca1c51c36ce7566161"
+git-tree-sha1 = "c7ec02c4c6a039a98a15f955462cd7aea5df4508"
 uuid = "cd3eb016-35fb-5094-929b-558a96fad6f3"
-version = "0.8.17"
+version = "0.8.19"
 
 [[IniFile]]
 deps = ["Test"]
@@ -109,9 +109,9 @@ uuid = "2f01184e-e22b-5df5-ae63-d93ebab69eaf"
 
 [[StableRNGs]]
 deps = ["Random", "Test"]
-git-tree-sha1 = "705f8782b1d532c6db75e0a986fb848a629f971a"
+git-tree-sha1 = "b57c4216b6c163a3a9d674f6b9f7b99cdccdb959"
 uuid = "860ef19b-820b-49d6-a774-d7a799459cd3"
-version = "0.1.1"
+version = "0.1.2"
 
 [[Statistics]]
 deps = ["LinearAlgebra", "SparseArrays"]
